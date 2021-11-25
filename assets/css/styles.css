@@ -50,6 +50,7 @@ a {
 
 .btn:hover {
   background-color: var(--frost-3);
+  border-color: var(--frost-3);
 }
 
 .btn--inactive {
@@ -60,6 +61,7 @@ a {
 
 .btn--inactive:hover {
   background-color: var(--light-1);
+  border-color: var(--frost-4);
 }
 
 #sketch {
