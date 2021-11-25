@@ -57,8 +57,8 @@ function deleteGrid() {
   }
 }
 
-sketch.style.height = '400px';
-sketch.style.width = '400px';
+sketch.style.height = '420px';
+sketch.style.width = '420px';
 
 const clearButton = document.querySelector(".controls__clear");
 const dimensionButtons = document.querySelectorAll(".controls__dimensions");
