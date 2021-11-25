@@ -40,10 +40,10 @@ a {
   align-items: center;
   margin: 0;
 }
+
 .main {
   display: flex;
   align-items: flex-start;
-  margin: 15px 0;
   gap: 20px;
 }
 
@@ -146,3 +146,6 @@ a {
   border-color: var(--color);
 }
 
+.footer {
+  margin: 25px 0;
+}
