@@ -27,11 +27,15 @@ body, html {
   background-color: var(--light-3);
   color: var(--dark-1);
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
 a {
   color: var(--dark-1);
+}
+
+h1 {
+  margin: 25px 0;
 }
 
 #container {
