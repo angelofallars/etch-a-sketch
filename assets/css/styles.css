@@ -53,6 +53,10 @@ a {
   border-color: var(--frost-3);
 }
 
+.btn:active {
+  transform: scale(1.07);
+}
+
 .btn--inactive {
   color: var(--frost-4);
   background-color: rgba(0, 0, 0, 0);
