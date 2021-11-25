@@ -12,19 +12,23 @@
   <div id="container">
     <h1>Etch-a-Sketch</h1>
 
-    <div class="controls">
-      <button class="btn controls__clear">Clear</button>
-      <button class="btn btn--inactive controls__dimensions" value=8>8x8</button>
-      <button class="btn controls__dimensions" value=16>16x16</button>
-      <button class="btn btn--inactive controls__dimensions" value=24>24x24</button>
-    </div>
-
     <div class="main">
       <div id="sketch"></div>
-      <div class="color-controls">
-        <button class="btn color-controls__btn" value="black">Black</button>
-        <button class="btn btn--inactive color-controls__btn" value="rainbow">Rainbow</button>
-        <button class="btn btn--inactive color-controls__btn" value="eraser">Eraser</button>
+      <div class="control-divs">
+
+        <div class="control-div color-controls">
+          <button class="btn color-controls__btn" value="black">Black</button>
+          <button class="btn btn--inactive color-controls__btn" value="rainbow">Rainbow</button>
+          <button class="btn btn--inactive color-controls__btn" value="eraser">Eraser</button>
+        </div>
+
+        <div class="control-div canvas-controls">
+          <button class="btn btn--inactive controls__dimensions" value=8>8x8</button>
+          <button class="btn controls__dimensions" value=16>16x16</button>
+          <button class="btn btn--inactive controls__dimensions" value=24>24x24</button>
+          <button class="btn controls__clear">Clear</button>
+        </div>
+
       </div>
     </div>
 

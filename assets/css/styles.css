@@ -18,6 +18,8 @@
   --yellow:  #EBCB8B;
   --green:   #A3BE8C;
   --magenta: #B48EAD;
+
+  --orange-dark: #BE7A65;
 }
 
 body, html {
@@ -66,6 +68,18 @@ a {
 .btn--inactive:hover {
   background-color: var(--light-1);
   border-color: var(--frost-4);
+}
+
+.controls__clear {
+  --color: var(--orange-dark);
+  background-color: var(--color);
+  border-color: var(--color);
+}
+
+.controls__clear:hover {
+  --color: var(--orange);
+  background-color: var(--color);
+  border-color: var(--color);
 }
 
 .main {
@@ -118,7 +132,13 @@ a {
   background-color: var(--magenta);
 }
 
-.color-controls {
+.control-divs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-div {
   display: flex;
   flex-direction: column;
   gap: 8px;
