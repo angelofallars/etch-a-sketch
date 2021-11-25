@@ -55,6 +55,15 @@ dimensionButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const dimensions = e.target.getAttribute("value");
     createGrid(dimensions);
+
+    // Make the current size highlighted
+    dimensionButtons.forEach((button) => {
+      if (button === e.target) {
+        button.classList.remove("btn--inactive");
+      } else {
+        button.classList.add("btn--inactive");
+      }
+    });
   });
 });
 
