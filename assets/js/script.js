@@ -1,10 +1,11 @@
 const sketch = document.querySelector("#sketch");
-const clearButton = document.querySelector(".clear-button");
 
 // Create a grid (default 16x16) inside the etch container
 function createGrid(dimensions = 16) {
   const squareCount = dimensions ** 2;
   const sketchWidth = parseInt(sketch.style.width);
+
+  deleteGrid();
 
   for (let i = 0; i < squareCount; i++) {
     let square = document.createElement("div");
@@ -31,11 +32,30 @@ function clearGrid() {
   }
 }
 
+// Delete the grid
+function deleteGrid() {
+  const childrenCount = sketch.children.length;
+
+  for (let i = childrenCount - 1; i >= 0; i--) {
+    sketch.children[i].remove();
+  }
+}
+
 sketch.style.height = '400px';
 sketch.style.width = '400px';
 
+const clearButton = document.querySelector(".controls__clear");
+const dimensionButtons = document.querySelectorAll(".controls__dimensions");
+
 clearButton.addEventListener("click", () => {
   clearGrid();
+});
+
+dimensionButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const dimensions = e.target.getAttribute("value");
+    createGrid(dimensions);
+  });
 });
 
 createGrid(16);
