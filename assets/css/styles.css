@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Nord Theme */
 :root {
   --dark-1:  #2E3440;
   --dark-2:  #3B4252;
@@ -17,18 +20,47 @@
   --magenta: #B48EAD;
 }
 
+body, html {
+  margin: 0;
+  background-color: var(--light-3);
+  color: var(--dark-1);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  background-color: var(--frost-4);
+  color: var(--light-3);
+  padding: 4px 10px;
+}
+
+button:hover {
+  background-color: var(--frost-3);
+}
+
 #sketch {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
   background-color: var(--dark-4);
-  padding: 10px;
-  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
 }
 
 .sketch__square {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid var(--dark-2);
   background-color: var(--light-3);
 }
 
