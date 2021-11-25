@@ -24,12 +24,10 @@ function createGrid(dimensions = 16) {
 }
 
 
-// Clear the current grid
+// Clear the grid of colors by "resetting" the styles of each square
 function clearGrid() {
-  const childrenCount = sketch.children.length;
-
-  for (let i = childrenCount - 1; i >= 0; i--) {
-    sketch.children[i].remove();
+  for (let child of sketch.children) {
+    child.className = "sketch__square";
   }
 }
 
@@ -38,18 +36,6 @@ sketch.style.width = '400px';
 
 clearButton.addEventListener("click", () => {
   clearGrid();
-  let dimensions;
-  
-  do {
-    dimensions = parseInt(prompt("Dimensions of new grid:"));
-
-    if (dimensions > 80) {
-      alert("Dimensions must be not more than 80.");
-    }
-  }
-  while (isNaN(dimensions) || dimensions > 80);
-
-  createGrid(dimensions);
 });
 
 createGrid(16);
