@@ -1,14 +1,37 @@
+:root {
+  --dark-1:  #2E3440;
+  --dark-2:  #3B4252;
+  --dark-3:  #434C5E;
+  --dark-4:  #4C566A;
+  --light-1: #D8DEE9;
+  --light-2: #E5E9F0;
+  --light-3: #ECEFF4;
+  --frost-1: #8FBCBB;
+  --frost-2: #88C0D0;
+  --frost-3: #81A1C1;
+  --frost-4: #5E81AC;
+  --red:     #BF616A;
+  --orange:  #D08770;
+  --yellow:  #EBCB8B;
+  --green:   #A3BE8C;
+  --magenta: #B48EAD;
+}
+
 #sketch {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
+  background-color: var(--dark-4);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .sketch__square {
   box-sizing: border-box;
   border: 1px solid black;
+  background-color: var(--light-3);
 }
 
 .sketch__square--black {
-  background-color: black;
+  background-color: var(--dark-1);
 }
