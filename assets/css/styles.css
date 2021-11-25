@@ -1,0 +1,14 @@
+#sketch {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.sketch__square {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.sketch__square--black {
+  background-color: black;
+}
