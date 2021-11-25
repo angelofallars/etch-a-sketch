@@ -1,4 +1,23 @@
 const sketch = document.querySelector("#sketch");
+const rainbowColors = ["red", "orange", "yellow",
+                       "green", "blue", "magenta"];
+
+let brushColor = "black";
+
+// Fill a square in the canvas with the color in 'brushColor'
+function fillSquare(e) {
+  e.target.setAttribute("class", "sketch__square");
+
+  if (brushColor === "black") {
+    e.target.classList.add("sketch__square--black");
+  } else if (brushColor === "rainbow") {
+    // Get a random color from rainbowColors
+    const squareColor = rainbowColors[Math.floor(Math.random() * 
+                                                 rainbowColors.length)];
+
+    e.target.classList.add(`sketch__square--${squareColor}`);
+  }
+}
 
 // Create a grid (default 16x16) inside the etch container
 function createGrid(dimensions = 16) {
@@ -15,10 +34,7 @@ function createGrid(dimensions = 16) {
     square.style.height = `${sketchWidth / dimensions}px`;
 
     // Make the grid divs change color on hover
-    square.addEventListener("mouseover", (e) => {
-      // Add a class to turn them black
-      e.target.classList.add("sketch__square--black");
-    });
+    square.addEventListener("mouseover", fillSquare);
 
     sketch.appendChild(square);
   }
@@ -46,10 +62,9 @@ sketch.style.width = '400px';
 
 const clearButton = document.querySelector(".controls__clear");
 const dimensionButtons = document.querySelectorAll(".controls__dimensions");
+const colorButtons = document.querySelectorAll(".color-controls__btn");
 
-clearButton.addEventListener("click", () => {
-  clearGrid();
-});
+clearButton.addEventListener("click", clearGrid);
 
 dimensionButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -58,6 +73,21 @@ dimensionButtons.forEach((button) => {
 
     // Make the current size highlighted
     dimensionButtons.forEach((button) => {
+      if (button === e.target) {
+        button.classList.remove("btn--inactive");
+      } else {
+        button.classList.add("btn--inactive");
+      }
+    });
+  });
+});
+
+colorButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    brushColor = e.target.value;
+
+    // Make the current size highlighted
+    colorButtons.forEach((button) => {
       if (button === e.target) {
         button.classList.remove("btn--inactive");
       } else {

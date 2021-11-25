@@ -64,13 +64,19 @@ a {
   border-color: var(--frost-4);
 }
 
+.main {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 0;
+  gap: 20px;
+}
+
 #sketch {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
   background-color: var(--dark-4);
   padding: 15px;
-  margin: 15px 0;
   border-radius: 5px;
 }
 
@@ -82,4 +88,37 @@ a {
 
 .sketch__square--black {
   background-color: var(--dark-1);
+}
+
+.sketch__square--red {
+  background-color: var(--red);
+}
+
+.sketch__square--orange {
+  background-color: var(--orange);
+}
+
+.sketch__square--yellow {
+  background-color: var(--yellow);
+}
+
+.sketch__square--green {
+  background-color: var(--green);
+}
+
+.sketch__square--blue {
+  background-color: var(--frost-4);
+}
+
+.sketch__square--magenta {
+  background-color: var(--magenta);
+}
+
+.color-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
 }
