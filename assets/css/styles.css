@@ -40,7 +40,7 @@ a {
 }
 
 .btn {
-  border: 1px solid;
+  border: 1px solid var(--frost-4);
   border-radius: 5px;
   font-size: 1.1em;
   background-color: var(--frost-4);
@@ -68,7 +68,7 @@ a {
   align-content: flex-start;
   background-color: var(--dark-4);
   padding: 15px;
-  margin: 20px 0;
+  margin: 15px 0;
   border-radius: 5px;
 }
 
